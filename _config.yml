@@ -9,3 +9,39 @@ collections:
     output: true
   jobs:
     output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "productors"
+    values:
+      layout: "producer"
+  - scope:
+      path: ""
+      type: "cultures"
+    values:
+      layout: "culture"
+  - scope:
+      path: ""
+      type: "staffs"
+    values:
+      layout: "staff"
+  - scope:
+      path: ""
+      type: "employments"
+    values:
+      layout: "employment"      
+  - scope:
+      path: ""
+    values:
+      layout: "default"
