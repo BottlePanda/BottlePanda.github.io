@@ -1,0 +1,11 @@
+collections:
+  productors:
+    output: true
+  cultures:
+    output: true
+  staffs:
+    output: true
+  employments:
+    output: true
+  jobs:
+    output: true

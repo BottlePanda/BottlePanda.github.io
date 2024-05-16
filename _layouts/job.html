@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h1>{{ page.name }}</h1>
+
+{{ content }}
+
+<h2>岗位信息</h2>
+<ul>
+  {% assign filtered_jobs = site.jobs | where: 'employment' %}
+  {% for job in filtered_jobs %}
+    <li><a href="{{ job.url }}">{{ job.title }}</a></li>
+  {% endfor %}
+</ul>

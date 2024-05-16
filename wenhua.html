@@ -1,0 +1,14 @@
+---
+layout: default
+title: 企业文化
+---
+<h1>企业文化</h1>
+
+<ul>
+  {% for culture in site.cultures %}
+    <li>
+      <h2><a href="{{ culture.url }}">{{ culture.title }}</a></h2>
+      {{ culture.excerpt }}
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,15 @@
+---
+layout: default
+title: 员工
+---
+<h1>员工</h1>
+
+<ul>
+    {% for staff in site.staffs %}
+      <li>
+        <h2><a href="{{ staff.url }}">{{ staff.name }}</a></h2>
+        <h3>{{ staff.position }}</h3>
+        <p>{{ staff.content | markdownify }}</p>
+      </li>
+    {% endfor %}
+  </ul>

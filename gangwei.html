@@ -1,0 +1,14 @@
+---
+layout: default
+title: 岗位
+---
+<h1>岗位信息</h1>
+
+<ul>
+    {% for job in site.jobs %}
+      <li>
+        <h2><a href="{{ job.url }}">{{ job.name }}</a></h2>
+        <p>{{ staff.content | markdownify }}</p>
+      </li>
+    {% endfor %}
+  </ul>

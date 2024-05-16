@@ -1,0 +1,14 @@
+---
+layout: default
+title: 招聘信息
+---
+<h1>岗位信息</h1>
+
+<ul>
+  {% for employment in site.employments %}
+    <li>
+      <h2><a href="{{ employment.url }}">{{ employment.title }}</a></h2>
+      {{ employment.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
