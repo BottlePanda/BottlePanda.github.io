@@ -7,8 +7,9 @@ layout: default
 
 <h2>岗位信息</h2>
 <ul>
-  {% assign filtered_jobs = site.jobs | where: 'employment' %}
-  {% for job in filtered_jobs %}
-    <li><a href="{{ job.url }}">{{ job.title }}</a></li>
+  {% for job in site.jobs %}
+    {% if job.employment %}
+      <li><a href="{{ job.url }}">{{ job.title }}</a></li>
+    {% endif %}
   {% endfor %}
 </ul>

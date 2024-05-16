@@ -40,7 +40,12 @@ defaults:
       path: ""
       type: "employments"
     values:
-      layout: "employment"      
+      layout: "employment"     
+  - scope:
+      path: ""
+      type: "jobs"
+    values:
+      layout: "job"  
   - scope:
       path: ""
     values:
