@@ -3,3 +3,20 @@ layout: default
 title: 企业简介
 ---
 <h1>详细了解一下我们的企业文化吧！</h1>
+<h2>公司成立背景</h2>
+<h3>哥拉斯公司成立于2024年5月16日,奥特之星绿化大学割草学院一间教室。</h3>
+
+
+<p>主要的里程碑和成就</p>
+<p>暂无，未来可期。</p>
+
+<h2>领导团队介绍</h2>
+
+<ul>
+    {% for staffs in site.staffs %}
+      <li>
+        <h2><a href="{{ staffs.url }}">{{ staffs.title }}</a></h2>
+        {{ staffs.excerpt }}
+      </li>
+    {% endfor %}
+  </ul>
