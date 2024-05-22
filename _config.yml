@@ -20,7 +20,7 @@ defaults:
       path: ""
       type: "productors"
     values:
-      layout: "producer"
+      layout: "productor"
   - scope:
       path: ""
       type: "cultures"

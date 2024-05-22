@@ -5,9 +5,9 @@ layout: default
 
 <p>
   {{ page.date | date_to_string }}
-  {% assign producer = site.productors | where: 'short_name', page.producer | first %}
-  {% if producer %}
-    - <a href="{{ producer.url }}">{{ producer.name }}</a>
+  {% assign productor = site.productors | where: 'name', page.productor | first %}
+  {% if productor %}
+    - <a href="{{ productor.url }}">{{ productor.name }}</a>
   {% endif %}
 </p>
 

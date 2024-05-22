@@ -6,7 +6,6 @@ layout: default
 
 {{ content }}
 
-<h2>简介</h2>
 <ul>
   {% assign filtered_cultures = site.cultures | where: 'staff', page.short_name %}
   {% for culture in filtered_cultures %}

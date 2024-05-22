@@ -5,10 +5,10 @@ title: 厂家
 <h1>厂家信息</h1>
 
 <ul>
-    {% for producer in site.productors %}
+    {% for productor in site.productors %}
       <li>
-        <h2><a href="{{ producer.url }}">{{ producer.name }}</a></h2>
-        <p>{{ producer.content | markdownify }}</p>
+        <h2><a href="{{ productor.url }}">{{ productor.name }}</a></h2>
+        <p>{{ productor.content | markdownify }}</p>
       </li>
     {% endfor %}
   </ul>
