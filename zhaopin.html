@@ -1,14 +1,58 @@
----
-layout: default
-title: 招聘信息
----
-<h1>招聘信息</h1>
+---  
+layout: default  
+title: 招聘信息  
+---  
+<h1 style="text-align: center;">快来加入我们开心大家庭吧</h1>  
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 基本的表格</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-<ul>
-  {% for employment in site.employments %}
-    <li>
-      <h2><a href="{{ employment.url }}">{{ employment.title }}</a></h2>
-      {{ employment.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+<table class="table">
+	<caption>长期招聘岗位及地区</caption>
+   <thead>
+      <tr>
+         <th>岗位</th>
+         <th>城市</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>创意设计师</td>
+         <td>M78星云</td>
+      </tr>
+      <tr>
+        <td>销售</td>
+         <td>M78星云</td>
+      </tr>
+   </tbody>
+</table>
+<!-- 折叠面板容器 -->  
+<div class="panel-group" id="accordion">  
+  <!-- 第一个折叠面板 -->  
+  <div class="panel panel-default">  
+    <div class="panel-heading">  
+      <h4 class="panel-title">  
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">  
+          其他招聘信息请点击  
+        </a>  
+      </h4>  
+    </div>  
+    <div id="collapseOne" class="panel-collapse collapse"> <!-- 移除了 'in' 类 -->  
+      <div class="panel-body">  
+        <!-- 这里是折叠内容 -->  
+        {% for employment in site.employments %}  
+          <h2><a href="{{ employment.url }}">{{ employment.title }}</a></h2>  
+          {{ employment.excerpt }}  
+        {% endfor %}  
+      </div>  
+    </div>  
+  </div>  
+  <!-- 其他折叠面板... -->  
+</div>
+
+</body>

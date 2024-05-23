@@ -2,13 +2,45 @@
 layout: default
 title: 产品介绍
 ---
-<h1>所有产品介绍</h1>
+<h1 style="text-align: center;">所有产品介绍</h1>
 
-<ul>
+<div class="row">
   {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
+    <div class="col-sm-6 col-md-3">
+        <div class="card">
+            <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}">
+            <div class="card-body">
+                <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                <p class="card-text">{{ post.excerpt }}</p>
+            </div>
+        </div>
+    </div>
   {% endfor %}
-</ul>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+          <img src="https://img2.imgtp.com/2024/05/16/vFitgnN6.jpg"
+               alt="通用的占位符缩略图">
+      </a>
+  </div>
+  <div class="col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+          <img src="https://cdn.pixabay.com/photo/2016/05/21/15/49/trinkglas-summer-1406971_1280.jpg"
+               alt="通用的占位符缩略图">
+      </a>
+  </div>
+  <div class="col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+          <img src="https://img2.imgtp.com/2024/05/16/agRhi2jF.jpg"
+               alt="通用的占位符缩略图">
+      </a>
+  </div>
+  <div class="col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+          <img src="https://img.zcool.cn/community/0134fb5cd92f3ea801208f8bb7d8fc.jpg@2o.jpg"
+               alt="通用的占位符缩略图">
+      </a>
+  </div>
+</div>
