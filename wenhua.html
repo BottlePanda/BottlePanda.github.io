@@ -12,15 +12,25 @@ title: 企业文化
 <script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>  
 <script src="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
 <style>
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        background-image: url('https://img2.imgtp.com/2024/05/30/apiJqVkC.jpg'); /* 更换新的背景图片 */
-        background-size: cover;
-        background-position: center;
-        color: #fff;
+    .left-wrapper {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background-image: url('assets/images/企业文化左.jpg');
+        background-size: 25%;
+        background-repeat: no-repeat;
+        background-position: left -50px;
+    }
+    .right-wrapper {
+        position: fixed;
+        left: 50%;
+        width: 50%;
+        height: 150vh;
+        background-image: url('assets/images/企业文化右.jpg');
+        background-size: 20%;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        background-position: right -120px;
     }
 
     .content-wrapper {
@@ -79,6 +89,8 @@ title: 企业文化
 </style>
 </head>
 <body>
+    <div class="left-wrapper"></div>
+    <div class="right-wrapper"></div>
     <div class="content-wrapper">
         <h1>企业文化</h1>
         <ul>
@@ -91,4 +103,5 @@ title: 企业文化
         </ul>
     </div>
 </body>
+
 </html>
